@@ -1,0 +1,12 @@
+console.log "index js"
+console.log "index watch"
+console.log "js"
+console.log "helloworld"
+alert("helloworld")
+"helloworld"
+a= 2
+b=1
+z=4
+if b>a
+	z=3
+
