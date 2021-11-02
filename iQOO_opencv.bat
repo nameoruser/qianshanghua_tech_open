@@ -1,6 +1,4 @@
-call show_check.py
-	echo %a%
-rem 自动打开小红书
+ rem 自动打开小红书
 	adb shell monkey -p com.xingin.xhs -c android.intent.category.LAUNCHER 1
 	ping -n 5 127.0.0.1>nul
 	rem 点击搜索按钮
@@ -56,6 +54,39 @@ if a = news(
 	adb shell input tap 80 166
 	ping -n 4 127.0.0.1>nul
 )else if (
+	rem 点击分享图标
+	adb shell input tap 995 166
+	ping -n 4 127.0.0.1>nul
+	rem 点击复制链接
+	adb shell input tap 580 1844
+	ping -n 4 127.0.0.1>nul
+	rem 点击返回桌面
+	adb shell input tap 527 2282
+	ping -n 4 127.0.0.1>nul
+	rem 打开浏览器
+	adb shell monkey -p com.android.browser -c android.intent.category.LAUNCHER 1
+	ping -n 5 127.0.0.1>nul
+	rem 刷新浏览器
+	adb shell input tap 950 161
+	ping -n 4 127.0.0.1>nul
+	rem 点击粘贴框
+	adb shell input tap 718 490
+	ping -n 4 127.0.0.1>nul
+	rem 粘贴信息
+	adb shell input swipe 718 490 718 490 1000
+	ping -n 2 127.0.0.1>nul
+	rem 点击粘贴
+	adb shell input tap 560 335
+	ping -n 4 127.0.0.1>nul
+	rem 点击submit
+	adb shell input tap 750 730
+	ping -n 4 127.0.0.1>nul
+	rem 点击返回桌面
+	adb shell input tap 527 2282
+	ping -n 4 127.0.0.1>nul
+	rem 自动打开小红书
+	adb shell monkey -p com.xingin.xhs -c android.intent.category.LAUNCHER 1
+	ping -n 5 127.0.0.1>nul
 	rem 点击返回
 	adb shell input tap 80 166
 	ping -n 4 127.0.0.1>nul
@@ -63,8 +94,44 @@ if a = news(
 	rem 点击第二个点
 	adb shell input tap 826 350
 	ping -n 4 127.0.0.1>nul
-	echo %a%
 if a = video(
+	rem 点击分享图标
+	adb shell input tap 995 166
+	ping -n 4 127.0.0.1>nul
+	rem 点击复制链接
+	adb shell input tap 580 1844
+	ping -n 4 127.0.0.1>nul
+	rem 点击返回桌面
+	adb shell input tap 527 2282
+	ping -n 4 127.0.0.1>nul
+	rem 打开浏览器
+	adb shell monkey -p com.android.browser -c android.intent.category.LAUNCHER 1
+	ping -n 5 127.0.0.1>nul
+	rem 刷新浏览器
+	adb shell input tap 950 161
+	ping -n 4 127.0.0.1>nul
+	rem 点击粘贴框
+	adb shell input tap 718 490
+	ping -n 4 127.0.0.1>nul
+	rem 粘贴信息
+	adb shell input swipe 718 490 718 490 1000
+	ping -n 2 127.0.0.1>nul
+	rem 点击粘贴
+	adb shell input tap 560 335
+	ping -n 4 127.0.0.1>nul
+	rem 点击submit
+	adb shell input tap 750 730
+	ping -n 4 127.0.0.1>nul
+	rem 点击返回桌面
+	adb shell input tap 527 2282
+	ping -n 4 127.0.0.1>nul
+	rem 自动打开小红书
+	adb shell monkey -p com.xingin.xhs -c android.intent.category.LAUNCHER 1
+	ping -n 5 127.0.0.1>nul
+	rem 点击返回
+	adb shell input tap 80 166
+	ping -n 4 127.0.0.1>nul
+)else if(
 	rem 点击分享图标
 	adb shell input tap 995 166
 	ping -n 4 127.0.0.1>nul

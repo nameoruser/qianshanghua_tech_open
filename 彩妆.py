@@ -35,8 +35,8 @@ def start_page(num):
     move_and_click_input_enter(1005,248,1,'$("input.corona_input[data-v-5f5cbc17]").value=%s'%num,'enter')
     click_enter(808,701)
     pyautogui.sleep(3)
-num=1
-end_num = 243
+num=295
+end_num = 364
 #网页地点730.4 and 704.8
 #刷新第一页
 #清除blogger/v2
@@ -62,10 +62,12 @@ for i in range(num,end_num):
     move_and_click(1230,217,1)
     #点击粘贴界面
     move_and_click(420,22,1)
+    #刷新粘贴界面
+    move_and_click(107,65,2)
     #找到粘贴地方，并粘贴
     move_and_click_paste(450,220,1)
     #点击提交
-    move_and_click(455,323,1)
+    move_and_click(455,323,2)
     #点击回原小红书
     move_and_click(126,21,1)
     #点击console
